@@ -246,6 +246,7 @@ ul{
     line-height: 1.14;
     text-transform: uppercase;
     letter-spacing: 0.03em;
+    margin-top: 30px;
 }
 .feature-text{
     margin-top: 10px;
@@ -260,14 +261,27 @@ ul{
 }
 .feature-item::before{
     display: block;
-    outline: solid 1px black;
+    height: 120px;
     content: "";
     background-size: contain;
     background-repeat: no-repeat;
-    height: 120px;
     background-position: center;
-    background-image: url();
+    background-color: var(--backing-color);
+    border-radius: 4px;
 }
+.feature-item:nth-child(1)::before{
+    background-image: url(../images/features/Group.svg);
+}
+.feature-item:nth-child(2)::before{
+    background-image: url(../images/features/clock\ 1.svg);
+}
+.feature-item:nth-child(3)::before{
+    background-image: url(../images/features/diagram\ 1.svg);
+}
+.feature-item:nth-child(4)::before{
+    background-image: url(../images/features/astronaut\ 1.svg);
+}
+
 
 .feature-item:first-child{
     margin-left: 0px;
