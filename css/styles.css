@@ -271,6 +271,7 @@ ul{
 }
 .feature-item:nth-child(1)::before{
     background-image: url(../images/features/Group.svg);
+    
 }
 .feature-item:nth-child(2)::before{
     background-image: url(../images/features/clock\ 1.svg);
@@ -281,7 +282,14 @@ ul{
 .feature-item:nth-child(4)::before{
     background-image: url(../images/features/astronaut\ 1.svg);
 }
-
+.feature-icon{
+    content: "";
+    display: flex;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .feature-item:first-child{
     margin-left: 0px;
