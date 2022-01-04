@@ -409,7 +409,7 @@ a{
       letter-spacing: 0.03em;
 }
 .social-list {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     display: flex;
     justify-content: center;
     margin-top: 16px;
