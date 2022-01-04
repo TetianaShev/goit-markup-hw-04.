@@ -8,6 +8,7 @@
     --backing-color: #f5f4fa;
     --header-color: #ececec;
     --portfolio-color: #e5e5e5;
+    --clients-color:#afb1b8;
     /* --card-set-gap: 30px */
 
     /* первый цвет фона : #E5E5E5; */
@@ -23,8 +24,7 @@ h3,
 h4,
 h5,
 h6,
-p,
-ul {
+p{
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -42,7 +42,12 @@ body {
 }
 ul{
     list-style: none;
-    padding: 0;
+    padding-inline-start: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
 }
 /* Cкрыть кнопки */
 .visually-hidden{
@@ -359,6 +364,7 @@ ul{
 .text{
       color: var(--text-color);
       margin-top: 10px;
+      font-weight: normal;
       font-size: 16px;
       line-height: 1.19;
       text-align: center;
@@ -367,36 +373,50 @@ ul{
 .social-list {
     outline: 1px solid red;
     display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    justify-content: center;
+    margin-top: 16px;
+    
   }
-  
-  .button-social{
-      padding: 0;
-      border: none;
+  .social-item{
       width: 44px;
       height: 44px;
-      border-radius: 50%;
-      color:red;
-      background-color: var(--accent-color-text);
-  }
- /* .button-social:hover{ */
-    /* background-color: var(--accent-color-text); */
-/* } */
-  .button-icon{
+      margin-left: 10px;
+      }
+ .social-item:first-child{
+     margin-left: 0;
+ }
+ .social-link{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     color: var(--clients-color);
+ }
+ .social-link:hover,
+ .social-link:focus{
+     color: var(--accent-color-text);
+     background-color: var(--accent-color);
+ }
+ .social-link:hover .social-icon,
+ .social-link:focus .social-icon{
+     fill: var(--accent-color-text);
+ }
+ .social-icon{
       width: 20px;
       height: 20px;
       fill: currentColor;
-      
-
-  }
-  .button-icon:hover{
-      background-color: var(--accent-color);
-  }
+      }
+ 
  
 
 /* Buttons */
+.ul-filter{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 .btn{
     color: var(--titles-text-color-first);
     background-color: var(--backing-color);
@@ -412,15 +432,12 @@ ul{
 .btn:focus{
     color: var(--accent-color-text);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.12),0px 1px 2px rgba(0, 0, 0, 0.08),0px 2px 2px rgba(0, 0, 0, 0.01);
 }
 .filter-item:not(:first-child) {
     margin-left: 8px;
 }
-.ul-filter{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
+
 
   /* Портфолио */
     
@@ -431,7 +448,17 @@ ul{
     }
 .portfolio-image{
         margin: 15px;
+        width: 370px;
+        display: block;
     }
+.portfolio-img{
+    display: block;
+    background-color: var(--accent-color-text);
+} 
+.portfolio-img:hover,
+.portfolio-img:focus{
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),0px 4px 4px rgba(0, 0, 0, 0.06),0px 1px 1px rgba(0, 0, 0, 0.12);
+}
 .portfolio-title{
     color: var(--titles-text-color-first);
     font-weight: 700;
@@ -462,7 +489,62 @@ ul{
 .flex-element:nth-child(3n) {
     margin-right: 0;
 }
-
+.portfolio-name{
+    padding: 20px 24px;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+}
+/* Clients */
+.clients{
+    padding: 94px auto;
+    background-color: var(--portfolio-color);
+}
+.section-title{
+    margin-bottom: 50px;
+    font-weight: 700px;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.client-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.client-item{
+    width: 170px;
+    height: 92px;
+    margin-left: 30px;
+}
+.client-item:first-child{
+    margin-left: 0;
+}
+.client-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clients-color);
+    border: 1px solid var(--clients-color);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+.client-link:hover,
+.client-link:focus{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.client-link:hover .client-icon,
+.client-link:focus .client-icon{
+    fill: var(--accent-color);
+}
+.client-icon{
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
 /* Footer */
 
 .footer{
