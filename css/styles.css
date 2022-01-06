@@ -517,6 +517,7 @@ a{
     border-right: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
 }
+
 .flex-container{
     display: flex;
     flex-wrap: wrap;
@@ -527,12 +528,7 @@ a{
 .flex-element:nth-child(3n) {
     margin-right: 0;
 }
-.portfolio-name{
-    padding: 20px 24px;
-    border-bottom: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
-    border-left: 1px solid #eeeeee;
-}
+
 /* Clients */
 .clients{
     padding: 94px auto;
@@ -583,6 +579,7 @@ a{
     height: 60px;
     fill: currentColor;
 }
+
 /* Footer */
 
 .footer{
